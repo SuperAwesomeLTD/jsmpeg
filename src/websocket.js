@@ -8,7 +8,8 @@ function arrayBufferToString (buffer) {
 var WSSource = function(url, options) {
 	this.url = url;
 	this.options = options;
-	this.socket = null;	
+	this.socket = null;
+	this.streaming = true;
 
 	this.callbacks = {connect: [], data: []};
 	this.destination = null;
